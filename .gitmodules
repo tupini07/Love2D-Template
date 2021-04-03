@@ -1,0 +1,12 @@
+[submodule "libs/hump"]
+	path = libs/hump
+	url = git@github.com:vrld/hump.git
+[submodule "libs/lume"]
+	path = libs/lume
+	url = git@github.com:rxi/lume.git
+[submodule "libs/hsluv-lua"]
+	path = libs/hsluv-lua
+	url = git@github.com:hsluv/hsluv-lua.git
+[submodule "libs/inspect.lua"]
+	path = libs/inspect.lua
+	url = git@github.com:kikito/inspect.lua.git
