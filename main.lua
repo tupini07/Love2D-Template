@@ -14,7 +14,10 @@ function love.load()
         callbacks[#callbacks+1] = k
     end
 
+    -- Register love events
     State.registerEvents(callbacks)
+
+    -- Switch to initial state
     State.switch(States.game)
 
     if DEBUG then
@@ -25,12 +28,14 @@ function love.load()
 end
 
 function love.update(dt)
-
+    State.current():update()
 end
 
 function love.draw()
     local drawTimeStart = love.timer.getTime()
+
     State.current():draw()
+
     local drawTimeEnd = love.timer.getTime()
     local drawTime = drawTimeEnd - drawTimeStart
 
@@ -62,8 +67,10 @@ function love.draw()
         love.graphics.setFont(CONFIG.debug.stats.font[CONFIG.debug.stats.fontSize])
         for i, text in ipairs(info) do
             local sx, sy = CONFIG.debug.stats.shadowOffset.x, CONFIG.debug.stats.shadowOffset.y
+            
             love.graphics.setColor(CONFIG.debug.stats.shadow)
             love.graphics.print(text, x + sx, y + sy + (i-1)*dy)
+
             love.graphics.setColor(CONFIG.debug.stats.foreground)
             love.graphics.print(text, x, y + (i-1)*dy)
         end

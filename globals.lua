@@ -1,3 +1,4 @@
+local lick = require "LICK"
 -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 -- !! This flag controls the ability to toggle the debug view.         !!
 -- !! You will want to turn this to 'true' when you publish your game. !!
@@ -85,20 +86,6 @@ Fonts.default = Fonts.regular
 
 CONFIG.debug.stats.font = Fonts.monospace
 CONFIG.debug.error.font = Fonts.monospace
-
--- Lume    = require 'libs.lume'
--- Husl    = require 'libs.husl'
--- Class   = require 'libs.class'
--- Vector  = require 'libs.vector'
--- State   = require 'libs.state'
--- Signal  = require 'libs.signal'
--- Inspect = require 'libs.inspect'
--- Camera  = require 'libs.camera'
--- Timer   = require 'libs.timer'
-
--- States = {
---     game = require 'states.game',
--- }
 
 Lume    = require 'libs.lume.lume'
 Husl    = require 'libs.hsluv-lua.hsluv'
