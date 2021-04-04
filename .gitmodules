@@ -10,3 +10,6 @@
 [submodule "libs/inspect.lua"]
 	path = libs/inspect.lua
 	url = git@github.com:kikito/inspect.lua.git
+[submodule "libs/tiny-ecs"]
+	path = libs/tiny-ecs
+	url = git@github.com:bakpakin/tiny-ecs.git

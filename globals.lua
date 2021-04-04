@@ -1,4 +1,3 @@
-local lick = require "LICK"
 -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 -- !! This flag controls the ability to toggle the debug view.         !!
 -- !! You will want to turn this to 'true' when you publish your game. !!
@@ -96,7 +95,8 @@ State   = require 'libs.hump.gamestate'
 Signal  = require 'libs.hump.signal'
 Camera  = require 'libs.hump.camera'
 Timer   = require 'libs.hump.timer'
+ECS = require 'libs.tiny-ecs.tiny'
 
 States = {
-    game = require 'states.game'
+    game = require 'src.states.Game'
 }

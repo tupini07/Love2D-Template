@@ -5,21 +5,21 @@ require 'globals'
 function love.load()
     love.window.setIcon(love.image.newImageData(CONFIG.window.icon))
     love.graphics.setDefaultFilter(CONFIG.graphics.filter.down,
-                                   CONFIG.graphics.filter.up,
-                                   CONFIG.graphics.filter.anisotropy)
-
+    CONFIG.graphics.filter.up,
+    CONFIG.graphics.filter.anisotropy)
+    
     -- Draw is left out so we can override it ourselves
     local callbacks = {'update'}
     for k in pairs(love.handlers) do
         callbacks[#callbacks+1] = k
     end
-
+    
     -- Register love events
     State.registerEvents(callbacks)
-
+    
     -- Switch to initial state
     State.switch(States.game)
-
+    
     if DEBUG then
         local loadTimeEnd = love.timer.getTime()
         local loadTime = (loadTimeEnd - loadTimeStart)
